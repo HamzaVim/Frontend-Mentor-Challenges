@@ -1,1 +1,1 @@
-**All Frontend Mentor Challenges inside branches**
+**All the challenges that I have gone through**.
