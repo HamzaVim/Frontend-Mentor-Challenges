@@ -1,0 +1,36 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--grayish-blue);
+  font-family: var(--FF);
+}
+
+:root {
+  --FF: "Public Sans", sans-serif;
+  --FS-light: 300;
+  --FS-regular: 400;
+  --FS-bold: 700;
+}
+
+:root {
+  --dark-blue: hsl(233, 26%, 24%);
+  --lime-green: hsl(136, 65%, 51%);
+  --bright-cyan: hsl(192, 70%, 51%);
+  --grayish-blue: hsl(233, 8%, 62%);
+  --light-grayish-blue: hsl(220, 16%, 96%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+}
+/*# sourceMappingURL=main.css.map */

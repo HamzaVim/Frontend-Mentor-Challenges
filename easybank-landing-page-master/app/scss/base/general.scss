@@ -1,3 +1,5 @@
+@use "../abstracts" as *;
+
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -12,7 +14,11 @@ html {
 }
 
 body {
-  font-family: var(--font-inter);
-  background-color: var(--dark-bg);
-  color: var(--dark-text2);
+  background-color: var(--white);
+  color: var(--grayish-blue);
+  font-family: var(--FF);
 }
+
+// .container {
+
+// }
