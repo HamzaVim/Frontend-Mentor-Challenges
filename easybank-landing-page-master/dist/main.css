@@ -15,6 +15,29 @@ body {
   background-color: var(--white);
   color: var(--grayish-blue);
   font-family: var(--FF);
+  padding-bottom: 2.75rem;
+}
+
+img {
+  display: block;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+a:any-link {
+  color: black;
 }
 
 :root {
@@ -32,5 +55,49 @@ body {
   --light-grayish-blue: hsl(220, 16%, 96%);
   --very-light-gray: hsl(0, 0%, 98%);
   --white: hsl(0, 0%, 100%);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.375rem;
+  position: relative;
+  background-color: var(--white);
+}
+.header__nav {
+  position: absolute;
+  top: 5.25rem;
+  color: whitesmoke;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  text-align: center;
+  padding: 0.3125rem 0;
+  border-radius: 0.3125rem;
+}
+.header__link {
+  width: 100%;
+  padding: 0.9375rem 0;
+}
+
+.home {
+  width: 100%;
+  min-height: 100vh;
+}
+.home__bg-intro {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+.home__image-molile {
+  width: 90%;
+  height: auto;
+  left: 50%;
+  transform: translateX(-50%) translateY(-29%);
+  position: absolute;
+  z-index: -1;
 }
 /*# sourceMappingURL=main.css.map */

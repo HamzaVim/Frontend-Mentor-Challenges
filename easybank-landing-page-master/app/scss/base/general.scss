@@ -17,6 +17,29 @@ body {
   background-color: var(--white);
   color: var(--grayish-blue);
   font-family: var(--FF);
+  padding-bottom: rem(44);
+}
+
+img {
+  display: block;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+a:any-link {
+  color: black;
 }
 
 // .container {

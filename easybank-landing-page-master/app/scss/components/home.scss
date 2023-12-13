@@ -1,0 +1,22 @@
+.home {
+  width: 100%;
+  min-height: 100vh;
+
+  &__bg-intro {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+  }
+
+  &__image-molile {
+    width: 90%;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%) translateY(-29%);
+    position: absolute;
+    z-index: -1;
+  }
+}

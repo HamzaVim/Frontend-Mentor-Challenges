@@ -1,0 +1,26 @@
+@use "../abstracts" as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: rem(20) rem(22);
+  position: relative;
+  background-color: var(--white);
+
+  &__nav {
+    position: absolute;
+    top: rem(84);
+    color: whitesmoke;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    width: 100%;
+    text-align: center;
+    padding: rem(5) 0;
+    border-radius: rem(5);
+  }
+
+  &__link {
+    width: 100%;
+    padding: rem(15) 0;
+  }
+}
