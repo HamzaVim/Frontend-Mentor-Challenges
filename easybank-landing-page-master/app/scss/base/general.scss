@@ -24,9 +24,12 @@ img {
   display: block;
 }
 
-button {
+button,
+input {
   border: none;
   background: none;
+  font-family: var(--FF);
+  cursor: pointer;
 }
 
 li {
@@ -40,6 +43,20 @@ a {
 
 a:any-link {
   color: black;
+}
+
+.button {
+  background-image: linear-gradient(
+    to right,
+    var(--lime-green) 40%,
+    var(--bright-cyan)
+  );
+  background-color: var(--lime-green);
+  padding: rem(15) rem(30);
+  border-radius: rem(25);
+  color: var(--white);
+  font-weight: var(--FS-bold);
+  font-size: rem(17);
 }
 
 // .container {

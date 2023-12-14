@@ -7,20 +7,75 @@
   padding: rem(20) rem(22);
   position: relative;
   background-color: var(--white);
+  z-index: 100;
 
-  &__nav {
+  // @include breakpoints(xs) {
+  // }
+
+  &__nav-mb {
     position: absolute;
-    top: rem(84);
-    color: whitesmoke;
-    background-color: rgba($color: #000000, $alpha: 0.5);
-    width: 100%;
+    top: 0;
+    left: rem(22);
+    background-color: var(--white);
+    width: calc(100% - rem(44));
     text-align: center;
     padding: rem(5) 0;
     border-radius: rem(5);
+    z-index: 2;
+
+    transition: transform ease-in-out 500ms;
+    transform: translateY(-30rem);
+
+    &[data-menu="open"] {
+      transform: translateY(rem(84));
+    }
+
+    @include breakpoints(md) {
+      display: none;
+    }
   }
 
   &__link {
     width: 100%;
     padding: rem(15) 0;
+  }
+
+  &__menu {
+    @include breakpoints(md) {
+      display: none;
+    }
+  }
+
+  &__ul {
+    display: flex;
+  }
+}
+
+.menu__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 115vh;
+  z-index: 1;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.3) 80%,
+    rgba(0, 0, 0, 0) 98%
+  );
+  transition: opacity ease-in-out 500ms;
+  opacity: 0;
+
+  &[data-menu="open"] {
+    opacity: 1;
+  }
+
+  &[data-menu="close"] {
+    transition-delay: 100ms;
+  }
+
+  @include breakpoints(md) {
+    display: none;
   }
 }

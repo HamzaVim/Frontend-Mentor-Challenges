@@ -20,6 +20,9 @@
     "axios": "1.6.2"
   },
   "dependencies": {
-    "browser-sync": "^2.29.3"
+    "@babel/preset-env": "^7.23.6",
+    "browser-sync": "^2.29.3",
+    "gulp-babel": "^8.0.0",
+    "gulp-terser": "^2.1.0"
   }
 }

@@ -22,15 +22,7 @@
       href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <!-- <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style> -->
+    <script defer src="./dist/script.js"></script>
   </head>
   <body>
     <!--      Request Invite  -->
@@ -42,15 +34,7 @@
         width="139"
         height="20"
       />
-      <button class="header__menu" role="menu">
-        <img
-          src="/images/icon-hamburger.svg"
-          alt="hamburger icon"
-          width="24"
-          height="11"
-        />
-      </button>
-      <!-- <nav class="header__nav">
+      <nav data-menu="close" class="header__nav">
         <ul class="header__ul">
           <li><a class="header__link" href="#">Home</a></li>
           <li><a class="header__link" href="#">About</a></li>
@@ -62,10 +46,34 @@
             <a class="header__link" href="#">Careers</a>
           </li>
         </ul>
-      </nav> -->
+      </nav>
+      <button class="button">Request Invite</button>
+      <button id="menu" class="header__menu" role="menu">
+        <img
+          id="menu__image"
+          src="/images/icon-hamburger.svg"
+          alt="hamburger icon"
+          width="24"
+          height="11"
+        />
+      </button>
     </header>
+    <nav data-menu="close" class="header__nav-mb">
+      <ul class="header__ul">
+        <li><a class="header__link" href="#">Home</a></li>
+        <li><a class="header__link" href="#">About</a></li>
+        <li>
+          <a class="header__link" href="#">Contact</a>
+        </li>
+        <li><a class="header__link" href="#">Blog</a></li>
+        <li>
+          <a class="header__link" href="#">Careers</a>
+        </li>
+      </ul>
+    </nav>
+    <div data-menu="close" id="menu__bg" class="menu__bg"></div>
     <main>
-      <section id="home">
+      <section class="home" id="home">
         <img
           src="/images/bg-intro-mobile.svg"
           alt="background intro"
@@ -80,15 +88,15 @@
           height="939"
           class="home__image-molile"
         />
-        <!-- <div aria-label="Header">
-          <h1>Next generation <br />digital banking</h1>
-          <p>
-            Take your financial life online. Your Easybank account will be a
-            one-stop-shop for spending, saving, budgeting, investing, and much
-            more.
+        <div class="home__container" aria-label="Header">
+          <h1 class="home__header">Next generation <br />digital banking</h1>
+          <p class="home__text">
+            Take your financial life online. Your Easybank <br />account will be
+            a one-stop-shop for spending,<br />
+            saving, budgeting, investing, and much more.
           </p>
           <button class="button">Request Invite</button>
-        </div> -->
+        </div>
       </section>
       <!-- <section id="about">
         <h2>Why choose Easybank?</h2>

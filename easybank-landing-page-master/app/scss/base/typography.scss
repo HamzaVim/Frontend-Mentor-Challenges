@@ -1,0 +1,23 @@
+@use "../abstracts" as *;
+
+h1,
+h2,
+h3 {
+  margin-bottom: rem(22);
+  line-height: 1.2;
+}
+
+p {
+  line-height: 1.6;
+  font-size: rem(20);
+  margin-bottom: rem(35);
+}
+
+h1 {
+  font-weight: var(--FS-regular);
+  font-size: min(rem(45), 11vw);
+
+  @include breakpoints(xs) {
+    font-size: min(rem(97), 11.8vw);
+  }
+}
