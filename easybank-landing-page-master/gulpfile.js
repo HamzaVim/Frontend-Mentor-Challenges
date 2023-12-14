@@ -1,7 +1,7 @@
 const { src, dest, watch, series } = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
-// const babel = require("gulp-babel")
-// const terser = require("gulp-terser")
+const babel = require("gulp-babel");
+const terser = require("gulp-terser");
 const browserSync = require("browser-sync").create();
 
 // Sass Task
@@ -12,12 +12,12 @@ function scssTask() {
 }
 
 // Js Task
-// function jsTask() {
-//   return src("app/js/script.js", { sourcemaps: true })
-//     .pipe(babel({ presets: ["@babel/preset-env"] }))
-//     .pipe(terser())
-//     .pipe(dest("dist", { sourcemaps: "." }));
-// }
+function jsTask() {
+  return src("app/js/script.js", { sourcemaps: true })
+    .pipe(babel({ presets: ["@babel/preset-env"] }))
+    .pipe(terser())
+    .pipe(dest("dist", { sourcemaps: "." }));
+}
 
 // Browsersync
 function browserSyncServer(cb) {
@@ -42,7 +42,10 @@ function browserSyncReload(cb) {
 // Watch task
 function watchTask() {
   watch("*.html", browserSyncReload);
-  watch(["app/scss/**/*.scss"], series(scssTask, browserSyncReload));
+  watch(
+    ["app/scss/**/*.scss", "app/js/**/*.js"],
+    series(scssTask, jsTask, browserSyncReload)
+  );
 }
 
 // Default gulp Task
