@@ -1,0 +1,13 @@
+@use "../utility" as *;
+
+.header {
+  @include breakpoints(large) {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+  }
+
+  &__toggle {
+  }
+}

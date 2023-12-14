@@ -1,0 +1,11 @@
+@use "../utility" as *;
+
+.container {
+  max-width: rem(1100);
+  padding: 0 rem(25);
+  margin: 0 auto;
+
+  @include breakpoints(large) {
+    padding: 0;
+  }
+}

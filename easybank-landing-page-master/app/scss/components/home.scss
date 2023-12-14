@@ -1,0 +1,39 @@
+@use "../abstracts" as *;
+
+.home {
+  min-height: 100vh;
+  width: 100%;
+  padding: rem(20) rem(22);
+  text-wrap: nowrap;
+
+  &__bg-intro {
+    height: auto;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -2;
+  }
+
+  &__image-molile {
+    height: auto;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%) translateY(-29%);
+    width: 90%;
+    z-index: -1;
+  }
+
+  &__container {
+    transform: translateY(77vw);
+
+    @include breakpoints(sm) {
+      transform: translateY(80vw);
+    }
+    text-align: center;
+  }
+
+  &__header {
+    color: var(--dark-blue);
+  }
+}
